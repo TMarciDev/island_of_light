@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import './App.css';
 
 import { Canvas } from "@react-three/fiber";
@@ -13,10 +13,13 @@ function App() {
         hi
       </h1>
       <Canvas className="canvas">
-        <OrbitControls />
+        <OrbitControls enableZoom={false} />
         <ambientLight intensity={0.5} />
         <directionalLight position={[-2, 5, 2]} intensity={3} />
-        <Box />
+        <Suspense fallback={null}>
+
+          <Box />
+        </Suspense>
       </Canvas>
     </div>
   );
