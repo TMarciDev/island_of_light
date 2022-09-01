@@ -2,8 +2,8 @@ import React, { Suspense, useRef } from 'react';
 import './App.css';
 
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { CubeTextureLoader, DoubleSide, Mesh, Object3D, PerspectiveCamera } from 'three';
-import { OrbitControls } from '@react-three/drei';
+import { CubeTextureLoader, Mesh, Object3D, /*PerspectiveCamera*/ } from 'three';
+//import { OrbitControls } from '@react-three/drei';
 
 function Box() {
   const boxRef = useRef<Mesh>(null!);
